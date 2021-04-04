@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="TicTacToeWPF.Views.MainView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             Height="300" Width="300" Background="White">
+    <UniformGrid Rows="3" Columns="3" Margin="10">
+        <ToggleButton Style="{StaticResource IN.TGL}" DataContext="{Binding Source[0]}"/>
+        <ToggleButton Style="{StaticResource IN.TGL}" DataContext="{Binding Source[1]}"/>
+        <ToggleButton Style="{StaticResource IN.TGL}" DataContext="{Binding Source[2]}"/>
+        <ToggleButton Style="{StaticResource IN.TGL}" DataContext="{Binding Source[3]}"/>
+        <ToggleButton Style="{StaticResource IN.TGL}" DataContext="{Binding Source[4]}"/>
+        <ToggleButton Style="{StaticResource IN.TGL}" DataContext="{Binding Source[5]}"/>
+        <ToggleButton Style="{StaticResource IN.TGL}" DataContext="{Binding Source[6]}"/>
+        <ToggleButton Style="{StaticResource IN.TGL}" DataContext="{Binding Source[7]}"/>
+        <ToggleButton Style="{StaticResource IN.TGL}" DataContext="{Binding Source[8]}"/>
+    </UniformGrid>
+</UserControl>
