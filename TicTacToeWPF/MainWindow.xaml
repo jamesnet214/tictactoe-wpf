@@ -6,11 +6,6 @@
         xmlns:view="clr-namespace:TicTacToeWPF.Views"
         mc:Ignorable="d" Title="TicTacToe" Width="600" Height="400">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="Auto"/>
-        </Grid.ColumnDefinitions>
-        <view:SettingView Grid.Column="0"/>
-        <view:MainView Grid.Column="1" HorizontalAlignment="Left"/>
+        <view:MainView/>
     </Grid>
 </Window>

@@ -1,13 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using TicTacToeWPF.Mvvm;
 
 namespace TicTacToeWPF.Models
 {
-    public class TicTacToeItem 
+    public class TicTacToeItem : ObservableObject
     {
-        public string PlayerType { get; set; }
+        private bool _isChecked;
+        private string _playerType;
+        public string PlayerType
+        {
+            get { return _playerType; }
+            set { _playerType = value; OnPropertyChanged(); }
+        }
+
+        public bool IsChecked
+        {
+            get { return _isChecked; }
+            set { _isChecked = value; OnPropertyChanged(); }
+        }
     }
 }

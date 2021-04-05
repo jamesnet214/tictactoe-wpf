@@ -7,7 +7,6 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/TicTacToeWPF;component/Template/PathResource.xaml"/>
                 <ResourceDictionary Source="/TicTacToeWPF;component/Design/MainViewResource.xaml"/>
-                <ResourceDictionary Source="/TicTacToeWPF;component/Design/SettingViewResource.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

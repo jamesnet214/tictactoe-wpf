@@ -4,16 +4,39 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             Height="300" Width="300" Background="White">
-    <UniformGrid Rows="3" Columns="3" Margin="10">
-        <ToggleButton Style="{StaticResource IN.TGL}" DataContext="{Binding Source[0]}"/>
-        <ToggleButton Style="{StaticResource IN.TGL}" DataContext="{Binding Source[1]}"/>
-        <ToggleButton Style="{StaticResource IN.TGL}" DataContext="{Binding Source[2]}"/>
-        <ToggleButton Style="{StaticResource IN.TGL}" DataContext="{Binding Source[3]}"/>
-        <ToggleButton Style="{StaticResource IN.TGL}" DataContext="{Binding Source[4]}"/>
-        <ToggleButton Style="{StaticResource IN.TGL}" DataContext="{Binding Source[5]}"/>
-        <ToggleButton Style="{StaticResource IN.TGL}" DataContext="{Binding Source[6]}"/>
-        <ToggleButton Style="{StaticResource IN.TGL}" DataContext="{Binding Source[7]}"/>
-        <ToggleButton Style="{StaticResource IN.TGL}" DataContext="{Binding Source[8]}"/>
-    </UniformGrid>
+             Width="600" Height="400" Background="White">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" Margin="0 70 0 0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="20 0 0 0">
+                <TextBlock Style="{StaticResource TXB.PLAYER.01}"/>
+                <TextBox Style="{StaticResource TXT.PLAYER}"/>
+            </StackPanel>
+            <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="20 50 0 0">
+                <TextBlock Style="{StaticResource TXB.PLAYER.02}"/>
+                <TextBox Style="{StaticResource TXT.PLAYER}"/>
+            </StackPanel>
+            <Button Style="{StaticResource BTN.START}"/>
+            <Button Style="{StaticResource BTN.RESTART}"/>
+        </Grid>
+        <UniformGrid Grid.Column="1" Rows="3" Columns="3" Width="250" Height="250">
+            <ToggleButton Style="{StaticResource IN.TGL}" DataContext="{Binding Source[0]}"/>
+            <ToggleButton Style="{StaticResource IN.TGL}" DataContext="{Binding Source[1]}"/>
+            <ToggleButton Style="{StaticResource IN.TGL}" DataContext="{Binding Source[2]}"/>
+            <ToggleButton Style="{StaticResource IN.TGL}" DataContext="{Binding Source[3]}"/>
+            <ToggleButton Style="{StaticResource IN.TGL}" DataContext="{Binding Source[4]}"/>
+            <ToggleButton Style="{StaticResource IN.TGL}" DataContext="{Binding Source[5]}"/>
+            <ToggleButton Style="{StaticResource IN.TGL}" DataContext="{Binding Source[6]}"/>
+            <ToggleButton Style="{StaticResource IN.TGL}" DataContext="{Binding Source[7]}"/>
+            <ToggleButton Style="{StaticResource IN.TGL}" DataContext="{Binding Source[8]}"/>
+        </UniformGrid>
+    </Grid>
 </UserControl>
