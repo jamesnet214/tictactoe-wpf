@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Converter\ValueExistsToVisibilityConverter.cs" />
     <Compile Include="Models\TicTacToeItem.cs" />
     <Compile Include="Mvvm\ICommand.cs" />
     <Compile Include="Mvvm\ObservableObject.cs" />
@@ -78,6 +79,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Template\ConverterResource.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Template\PathResource.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

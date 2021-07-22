@@ -10,23 +10,11 @@
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Grid Grid.Column="0" Margin="0 70 0 0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="20 0 0 0">
-                <TextBlock Style="{StaticResource TXB.PLAYER.01}"/>
-                <TextBox Style="{StaticResource TXT.PLAYER}"/>
-            </StackPanel>
-            <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="20 50 0 0">
-                <TextBlock Style="{StaticResource TXB.PLAYER.02}"/>
-                <TextBox Style="{StaticResource TXT.PLAYER}"/>
-            </StackPanel>
+        <StackPanel Grid.Column="0" Margin="0 70 0 0">
             <Button Style="{StaticResource BTN.START}"/>
-            <Button Style="{StaticResource BTN.RESTART}"/>
-        </Grid>
+			<Button Style="{StaticResource BTN.RESTART}"/>
+			<TextBlock Style="{StaticResource TXB.WINNER}"/>
+		</StackPanel>
         <UniformGrid Grid.Column="1" Rows="3" Columns="3" Width="250" Height="250">
             <ToggleButton Style="{StaticResource IN.TGL}" DataContext="{Binding Source[0]}"/>
             <ToggleButton Style="{StaticResource IN.TGL}" DataContext="{Binding Source[1]}"/>
@@ -38,5 +26,5 @@
             <ToggleButton Style="{StaticResource IN.TGL}" DataContext="{Binding Source[7]}"/>
             <ToggleButton Style="{StaticResource IN.TGL}" DataContext="{Binding Source[8]}"/>
         </UniformGrid>
-    </Grid>
+	</Grid>
 </UserControl>

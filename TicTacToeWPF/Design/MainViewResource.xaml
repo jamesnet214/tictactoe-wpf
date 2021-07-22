@@ -202,4 +202,12 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+	<Style TargetType="{x:Type TextBlock}" x:Key="TXB.WINNER">
+		<Setter Property="HorizontalAlignment" Value="Center"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+		<Setter Property="Margin" Value="0 10 0 0"/>
+		<Setter Property="Text" Value="{Binding Winner.PlayerType}"/>
+		<Setter Property="Visibility" Value="{Binding Winner.PlayerType, Converter={StaticResource ValueExistsToVisibilityConverter}}"/>
+	</Style>
 </ResourceDictionary>
