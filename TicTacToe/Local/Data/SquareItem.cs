@@ -8,16 +8,16 @@ namespace TicTacToe.Local.Data
 	{
 		public ICommand ChoiceCommand { get; set; }
 
-		private string _squareValue;
-		public string SquareValue
+		private Player _player;
+		public Player Player
 		{
-			get => _squareValue;
-			set { _squareValue = value; OnPropertyChanged(); }
+			get => _player;
+			set { _player = value; OnPropertyChanged(); }
 		}
 
-		public SquareItem(Action<SquareItem> choice)
+		public SquareItem(RelayCommand<SquareItem> choice)
 		{ 
-			ChoiceCommand = new RelayCommand<SquareItem>(choice);
+			ChoiceCommand = choice;
 
 		}
 	}

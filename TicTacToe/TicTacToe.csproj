@@ -8,11 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Page Update="Themes\Controls\GameView.xaml">
+    <Page Update="Themes\Controls\GameBoardItem.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Controls\GameBoardItem.xaml">
+    <Page Update="Themes\Controls\GameView.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
@@ -20,6 +20,10 @@
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Local\Converter\" />
   </ItemGroup>
 
 </Project>

@@ -7,35 +7,53 @@ namespace TicTacToe.Local.VIewModel
 {
 	public class GameViewModel : ObservableObject
 	{
-		private bool playerTurn;
+		private int _playCount;
 
 		public SquareItem[] Squares { get; set; }
+
+		public int PlayCount
+		{
+			get => _playCount;
+			set { _playCount = value; OnPropertyChanged(); }
+		}
 
 		public GameViewModel()
 		{
 			SetGameBoard();
 		}
 
-		private void Choice(SquareItem obj)
+		private void Choice(SquareItem item)
 		{
-			obj.SquareValue = playerTurn ? "O" : "X";
-			playerTurn = !playerTurn;
+			item.Player = (PlayCount++ % 2) switch
+			{
+				0 => Player.Player1,
+				1 => Player.Player2,
+				_ => Player.None
+			};
+		}
+
+		private bool CanChoice(SquareItem obj)
+		{
+			return obj?.Player == Player.None;
 		}
 
 		private void SetGameBoard()
 		{
-			Squares = new[]
+			var choiceCommand = new RelayCommand<SquareItem>(Choice, CanChoice);
+
+			var data = new[]
 			{
-				new SquareItem(Choice),
-				new SquareItem(Choice),
-				new SquareItem(Choice),
-				new SquareItem(Choice),
-				new SquareItem(Choice),
-				new SquareItem(Choice),
-				new SquareItem(Choice),
-				new SquareItem(Choice),
-				new SquareItem(Choice),
+				new SquareItem(choiceCommand),
+				new SquareItem(choiceCommand),
+				new SquareItem(choiceCommand),
+				new SquareItem(choiceCommand),
+				new SquareItem(choiceCommand),
+				new SquareItem(choiceCommand),
+				new SquareItem(choiceCommand),
+				new SquareItem(choiceCommand),
+				new SquareItem(choiceCommand),
 			};
+			Squares = data;
 		}
 	}
 }

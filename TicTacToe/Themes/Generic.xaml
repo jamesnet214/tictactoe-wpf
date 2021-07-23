@@ -2,7 +2,6 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 	<ResourceDictionary.MergedDictionaries>
-		<ResourceDictionary Source="/Themes/Resources/Geometries.xaml"/>
 		<ResourceDictionary Source="/Themes/Controls/GameBoardItem.xaml"/>
 		<ResourceDictionary Source="/Themes/Controls/GameBoard.xaml"/>
 		<ResourceDictionary Source="/Themes/Controls/GameView.xaml"/>
