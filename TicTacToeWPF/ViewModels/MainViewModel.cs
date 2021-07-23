@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Windows.Input;
 using TicTacToeWPF.Models;
 using TicTacToeWPF.Mvvm;
 
 namespace TicTacToeWPF.ViewModels
 {
-    public class MainViewModel : ObservableObject
+	public class MainViewModel : ObservableObject
     {
         private bool _playerTurn;
         private bool _isActivated;
