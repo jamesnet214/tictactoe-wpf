@@ -86,6 +86,18 @@ namespace TicTacToe.Local.VIewModel
                 Finish(Player.None);
             }
         }
+        #endregion
+
+        #region SetPlayers
+
+        private void SetPlayers()
+        {
+            Player1 = new("James");
+            Player2 = new("ELena");
+        }
+        #endregion
+
+        #region Finish
 
         private void Finish(Player player)
         {
@@ -102,16 +114,6 @@ namespace TicTacToe.Local.VIewModel
             SetSquares();
         }
         #endregion
-
-        #region SetPlayers
-
-        private void SetPlayers()
-        {
-            Player1 = new("James");
-            Player2 = new("ELena");
-        }
-        #endregion
-
 
         #region SetSquares
 
