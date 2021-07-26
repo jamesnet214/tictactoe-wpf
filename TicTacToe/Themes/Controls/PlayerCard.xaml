@@ -3,15 +3,15 @@
 					xmlns:units="clr-namespace:TicTacToe.UI.Units">
 
 	<Geometry x:Key="GEO.PEOPLE">M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z</Geometry>
-	<Geometry x:Key="GEO.CHECK">M8,5.14V19.14L19,12.14L8,5.14Z</Geometry>
+	<Geometry x:Key="GEO.PLAY">M8,5.14V19.14L19,12.14L8,5.14Z</Geometry>
 
 	<Style TargetType="{x:Type Control}" x:Key="PEOPLE">
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type Control}">
-					<Grid Margin="10 10 10 10">
+					<Grid Margin="10 10 0 10">
 						<Ellipse Fill="#FFFFFF"/>
-						<Viewbox Width="40" Height="40">
+						<Viewbox Width="29" Height="29">
 							<Canvas Width="24" Height="24">
 								<Path Fill="#AAAAAA" Data="{StaticResource GEO.PEOPLE}" />
 							</Canvas>
@@ -21,8 +21,8 @@
 			</Setter.Value>
 		</Setter>
 	</Style>
-	
-	<Style TargetType="{x:Type Control}" x:Key="CHECK">
+
+    <Style TargetType="{x:Type Control}" x:Key="PLAY">
 		<Setter Property="Visibility" Value="Hidden"/>
 		<Setter Property="Grid.Column" Value="2"/>
 		<Setter Property="Template">
@@ -31,7 +31,7 @@
 					<Grid Margin="10 10 10 10">
 						<Viewbox Width="25" Height="25">
 							<Canvas Width="24" Height="24">
-								<Path Fill="#FFFFFF" Data="{StaticResource GEO.CHECK}" />
+                                <Path Fill="#FFFFFF" Data="{StaticResource GEO.PLAY}" />
 							</Canvas>
 						</Viewbox>
 					</Grid>
@@ -85,9 +85,9 @@
 	</Style>
 	
 	<Style TargetType="{x:Type units:PlayerCard}">
-		<Setter Property="Background" Value="Transparent"/>
+		<Setter Property="Background" Value="#2B2B2B"/>
 		<Setter Property="Foreground" Value="#FFFFFF"/>
-		<Setter Property="Margin" Value="0"/>
+		<Setter Property="Margin" Value="0.5"/>
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type units:PlayerCard}">
@@ -102,7 +102,7 @@
 							</Grid.ColumnDefinitions>
 							<Control Style="{StaticResource PEOPLE}"/>
 							<TextBox x:Name="txt" Style="{StaticResource EDIT}"/>
-							<Control x:Name="chk" Style="{StaticResource CHECK}"/>
+                            <Control x:Name="chk" Style="{StaticResource PLAY}"/>
 						</Grid>
 					</Border>
 					<ControlTemplate.Triggers>

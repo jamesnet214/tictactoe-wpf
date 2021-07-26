@@ -17,7 +17,7 @@ namespace TicTacToe.Local.Mvvm
         public RelayCommand(Action<T> execute)
             : this(execute, null)
         {
-        } 
+        }
 
         public RelayCommand(Action<T> execute, Predicate<T> canExecute)
         {
@@ -36,7 +36,7 @@ namespace TicTacToe.Local.Mvvm
         {
             return _canExecute == null ? true : _canExecute((T)parameter);
         }
-        
+
         public event EventHandler CanExecuteChanged
         {
             add { CommandManager.RequerySuggested += value; }

@@ -5,7 +5,7 @@ using TicTacToeWPF.Mvvm;
 
 namespace TicTacToeWPF.ViewModels
 {
-	public class MainViewModel : ObservableObject
+    public class MainViewModel : ObservableObject
     {
         private bool _playerTurn;
         private bool _isActivated;
@@ -75,13 +75,13 @@ namespace TicTacToeWPF.ViewModels
             Winner = CalculateWinner(Source);
 
             if (Winner != null)
-			{
+            {
                 IsActivated = false;
             }
         }
 
         private TicTacToeItem CalculateWinner(List<TicTacToeItem> items)
-		{
+        {
             List<int[]> arrayList = new List<int[]>()
             {
                 new int[] { 0, 1, 2 },
@@ -94,8 +94,8 @@ namespace TicTacToeWPF.ViewModels
                 new int[] { 2, 4, 6 }
             };
 
-			for (int i = 0; i < arrayList.Count; i++)
-			{
+            for (int i = 0; i < arrayList.Count; i++)
+            {
                 var tempArray = arrayList[i];
 
                 var firstType = items[tempArray[0]].PlayerType;
@@ -103,10 +103,10 @@ namespace TicTacToeWPF.ViewModels
                 var thirdType = items[tempArray[2]].PlayerType;
 
                 if (firstType == secondType && firstType == thirdType && firstType != null)
-				{
+                {
                     return items[tempArray[0]];
-				}
-			}
+                }
+            }
 
             return null;
         }
