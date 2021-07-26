@@ -3,12 +3,13 @@
 					xmlns:units="clr-namespace:TicTacToe.UI.Units">
 
 	<Geometry x:Key="GEO.PEOPLE">M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z</Geometry>
+	<Geometry x:Key="GEO.CHECK">M8,5.14V19.14L19,12.14L8,5.14Z</Geometry>
 
 	<Style TargetType="{x:Type Control}" x:Key="PEOPLE">
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type Control}">
-					<Grid Margin="10 10 20 10">
+					<Grid Margin="10 10 10 10">
 						<Ellipse Fill="#FFFFFF"/>
 						<Viewbox Width="40" Height="40">
 							<Canvas Width="24" Height="24">
@@ -20,13 +21,60 @@
 			</Setter.Value>
 		</Setter>
 	</Style>
+	
+	<Style TargetType="{x:Type Control}" x:Key="CHECK">
+		<Setter Property="Visibility" Value="Hidden"/>
+		<Setter Property="Grid.Column" Value="2"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Control}">
+					<Grid Margin="10 10 10 10">
+						<Viewbox Width="25" Height="25">
+							<Canvas Width="24" Height="24">
+								<Path Fill="#FFFFFF" Data="{StaticResource GEO.CHECK}" />
+							</Canvas>
+						</Viewbox>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
 
 	<Style TargetType="{x:Type TextBox}" x:Key="EDIT">
 		<Setter Property="Grid.Column" Value="1"/>
+		<Setter Property="Background" Value="Transparent"/>
+		<Setter Property="CaretBrush" Value="#FFFFFF"/>
+		<Setter Property="Foreground" Value="#FFFFFF"/>
 		<Setter Property="Text" Value="{Binding PlayerName}"/>
 		<Setter Property="VerticalContentAlignment" Value="Center"/>
-		<Setter Property="Visibility" Value="Collapsed"/>
-		<Setter Property="Padding" Value="10"/>
+		<Setter Property="Padding" Value="5"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type TextBox}">
+					<Border Padding="{TemplateBinding Padding}"
+							Background="{TemplateBinding Background}">
+						<Grid>
+							<TextBlock x:Name="txb"
+									   Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Text}"
+									   VerticalAlignment="Center"
+									   Margin="7 0 0 0"/>
+							<ScrollViewer x:Name="PART_ContentHost"
+										  Margin="0"
+										  VerticalAlignment="Center"
+										  Padding="0" Visibility="Hidden"/>
+						</Grid>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsMouseOver" Value="True">
+						</Trigger>
+						<Trigger Property="IsKeyboardFocusWithin" Value="True">
+							<Setter TargetName="txb" Property="Visibility" Value="Collapsed"/>
+							<Setter TargetName="PART_ContentHost" Property="Visibility" Value="Visible"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
 	</Style>
 
 	<Style TargetType="{x:Type TextBlock}" x:Key="DISPLAY">
@@ -39,31 +87,32 @@
 	<Style TargetType="{x:Type units:PlayerCard}">
 		<Setter Property="Background" Value="Transparent"/>
 		<Setter Property="Foreground" Value="#FFFFFF"/>
-		<Setter Property="Margin" Value="10"/>
+		<Setter Property="Margin" Value="0"/>
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type units:PlayerCard}">
-					<Border Background="{TemplateBinding Background}"
+					<Border Background="{TemplateBinding Background}" 
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}">
 						<Grid>
 							<Grid.ColumnDefinitions>
 								<ColumnDefinition Width="Auto"/>
 								<ColumnDefinition Width="*"/>
+								<ColumnDefinition Width="Auto"/>
 							</Grid.ColumnDefinitions>
 							<Control Style="{StaticResource PEOPLE}"/>
 							<TextBox x:Name="txt" Style="{StaticResource EDIT}"/>
-							<TextBlock x:Name="txb" Style="{StaticResource DISPLAY}"/>
+							<Control x:Name="chk" Style="{StaticResource CHECK}"/>
 						</Grid>
 					</Border>
 					<ControlTemplate.Triggers>
 						<Trigger Property="IsMouseOver" Value="True">
-							<Setter TargetName="txt" Property="Visibility" Value="Visible"/>
-							<Setter TargetName="txb" Property="Visibility" Value="Collapsed"/>
+							<Setter Property="Background" Value="#FF2A59AA"/>
+							<Setter Property="Background" Value="#33000000"/>
 						</Trigger>
-						<DataTrigger Binding="{Binding ElementName=txt, Path=IsKeyboardFocusWithin}" Value="True">
-							<Setter TargetName="txt" Property="Visibility" Value="Visible"/>
-							<Setter TargetName="txb" Property="Visibility" Value="Collapsed"/>
+						<DataTrigger Binding="{Binding IsTurn}" Value="True">
+							<Setter Property="Background" Value="#FF3B5881"/>
+							<Setter TargetName="chk" Property="Visibility" Value="Visible"/>
 						</DataTrigger>
 					</ControlTemplate.Triggers>
 				</ControlTemplate>

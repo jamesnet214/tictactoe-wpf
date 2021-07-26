@@ -10,16 +10,29 @@ namespace TicTacToe.Local.Data
 	public class PlayerItem : ObservableObject
 	{
 		private string _playerName;
-
-		public PlayerItem(string name)
-		{
-			PlayerName  = name;
-		}
+		private bool _isTurn;
 
 		public string PlayerName
 		{
 			get => _playerName;
 			set { _playerName = value; OnPropertyChanged(); }
+		}
+
+		public bool IsTurn
+		{
+			get => _isTurn;
+			set { _isTurn = value; OnPropertyChanged(); }
+		}
+
+		public PlayerItem(string name, bool isTurn)
+		{
+			PlayerName  = name;
+			IsTurn = isTurn;
+		}
+
+		internal void SwitchTurn()
+		{
+			IsTurn = !IsTurn;
 		}
 	}
 }

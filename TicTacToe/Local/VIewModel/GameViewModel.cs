@@ -59,20 +59,40 @@ namespace TicTacToe.Local.VIewModel
 
 		#region Choice
 
-		private void Choice(SquareItem item)
+		private void Choice(SquareItem square)
 		{
-			item.Player = (PlayCount++ % 2) switch
+			square.Player = (PlayCount++ % 2) switch
 			{
 				0 => Player.Player1,
 				1 => Player.Player2,
 				_ => Player.None
 			};
 
-			var winner = CalculateWinner();
+			// Switch player turn.
+			Player1.SwitchTurn();
+			Player2.SwitchTurn();
 
+			if (CalculateWinner() is SquareItem winner)
+			{
+				// Win
+				Finish(winner);
+			}
+			else if (PlayCount == 9)
+			{
+				// Draw
+				Finish(null);
+			}
+		}
+
+		private void Finish(SquareItem winner)
+		{
 			if (winner != null)
 			{
-				MessageBox.Show(winner.WinnerMessage);
+
+			}
+			else
+			{ 
+			
 			}
 		}
 		#endregion
@@ -81,8 +101,8 @@ namespace TicTacToe.Local.VIewModel
 
 		private void SetPlayers()
 		{
-			Player1 = new("Elena Kim");
-			Player2 = new("James Lee");
+			Player1 = new("James", true);
+			Player2 = new("ELena", false);
 		}
 		#endregion
 

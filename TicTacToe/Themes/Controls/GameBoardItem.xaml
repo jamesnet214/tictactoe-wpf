@@ -9,10 +9,11 @@
 	<Style TargetType="{x:Type Button}" x:Key="MarkButton">
 		<Setter Property="Command" Value="{Binding ChoiceCommand}"/>
 		<Setter Property="CommandParameter" Value="{Binding}"/>
+		<Setter Property="Background" Value="#292929"/>
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type Button}">
-					<Border Background="#151515" Margin="0.5" SnapsToDevicePixels="True" UseLayoutRounding="True">
+					<Border Background="{TemplateBinding Background}" Margin="0.5" SnapsToDevicePixels="True" UseLayoutRounding="True">
 						<Viewbox Width="50" Height="50">
 							<Path x:Name="path" Width="24" Height="24" Fill="#FFFFFF"/>
 						</Viewbox>
@@ -20,10 +21,15 @@
 					<ControlTemplate.Triggers>
 						<DataTrigger Binding="{Binding Player}" Value="{x:Static datas:Player.Player1}">
 							<Setter TargetName="path" Property="Data" Value="{StaticResource GEO.X}"/>
+							<Setter TargetName="path" Property="Fill" Value="#FFFF7878"/>
 						</DataTrigger>
 						<DataTrigger Binding="{Binding Player}" Value="{x:Static datas:Player.Player2}">
 							<Setter TargetName="path" Property="Data" Value="{StaticResource GEO.O}"/>
+							<Setter TargetName="path" Property="Fill" Value="#FF2B7BB2"/>
 						</DataTrigger>
+						<Trigger Property="IsEnabled" Value="False">
+							<Setter Property="Background" Value="#222222"/>
+						</Trigger>
 					</ControlTemplate.Triggers>
 				</ControlTemplate>
 			</Setter.Value>
