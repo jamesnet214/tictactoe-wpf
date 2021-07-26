@@ -19,10 +19,10 @@
 					</Border>
 					<ControlTemplate.Triggers>
 						<DataTrigger Binding="{Binding Player}" Value="{x:Static datas:Player.Player1}">
-							<Setter TargetName="path" Property="Data" Value="{StaticResource GEO.O}"/>
+							<Setter TargetName="path" Property="Data" Value="{StaticResource GEO.X}"/>
 						</DataTrigger>
 						<DataTrigger Binding="{Binding Player}" Value="{x:Static datas:Player.Player2}">
-							<Setter TargetName="path" Property="Data" Value="{StaticResource GEO.X}"/>
+							<Setter TargetName="path" Property="Data" Value="{StaticResource GEO.O}"/>
 						</DataTrigger>
 					</ControlTemplate.Triggers>
 				</ControlTemplate>

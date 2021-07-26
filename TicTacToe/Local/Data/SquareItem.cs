@@ -1,5 +1,4 @@
-﻿using System;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 using TicTacToe.Local.Mvvm;
 
 namespace TicTacToe.Local.Data
@@ -15,7 +14,9 @@ namespace TicTacToe.Local.Data
 			set { _player = value; OnPropertyChanged(); }
 		}
 
-		public SquareItem(RelayCommand<SquareItem> choice)
+		public string WinnerMessage => "Win: " + Player;
+
+		public SquareItem(ICommand choice)
 		{ 
 			ChoiceCommand = choice;
 

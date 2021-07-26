@@ -4,6 +4,7 @@
 	<ResourceDictionary.MergedDictionaries>
 		<ResourceDictionary Source="/Themes/Controls/GameBoardItem.xaml"/>
 		<ResourceDictionary Source="/Themes/Controls/GameBoard.xaml"/>
+		<ResourceDictionary Source="/Themes/Controls/PlayerCard.xaml"/>
 		<ResourceDictionary Source="/Themes/Controls/GameView.xaml"/>
 	</ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

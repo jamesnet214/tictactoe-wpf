@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 
 namespace TicTacToe.UI.Views
@@ -14,13 +15,20 @@ namespace TicTacToe.UI.Views
 		{
 			WindowStyle = WindowStyle.None;
 			AllowsTransparency = true;
-
-			MouseMove += GameView_MouseMove;
 		}
 
-		private void GameView_MouseMove(object sender, MouseEventArgs e)
+		public override void OnApplyTemplate()
 		{
-			if (e.LeftButton == System.Windows.Input.MouseButtonState.Pressed)
+			if (GetTemplateChild("PART_Border") is Border border)
+			{
+				border.MouseMove += Border_MouseMove;
+			}
+		}
+
+		private void Border_MouseMove(object sender, MouseEventArgs e)
+		{
+			if (e.LeftButton == System.Windows.Input.MouseButtonState.Pressed
+				&& sender.Equals(e.OriginalSource))
 			{
 				this.DragMove();
 			}

@@ -12,6 +12,7 @@
 					<Border Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
+							x:Name="PART_Border"
 							Width="800"
 							Height="400">
 						<Grid>
@@ -19,6 +20,10 @@
 								<ColumnDefinition Width="*"/>
 								<ColumnDefinition Width="*"/>
 							</Grid.ColumnDefinitions>
+							<StackPanel VerticalAlignment="Top">
+								<units:PlayerCard DataContext="{Binding Player1}"/>
+								<units:PlayerCard DataContext="{Binding Player2}"/>
+							</StackPanel>
 							<units:GameBoard Grid.Column="1"/>
 						</Grid>
 					</Border>
