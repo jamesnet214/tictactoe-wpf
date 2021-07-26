@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Windows;
+﻿using System.Collections.Generic;
 using System.Windows.Input;
 using TicTacToe.Local.Data;
 using TicTacToe.Local.Mvvm;

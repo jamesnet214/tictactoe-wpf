@@ -3,82 +3,37 @@
                     xmlns:views="clr-namespace:TicTacToe.UI.Views"
 					xmlns:units="clr-namespace:TicTacToe.UI.Units">
 
-    <Geometry x:Key="GEO.CHECK">M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z</Geometry>
-    <Geometry x:Key="GEO.TRIANGLE">M12,2L1,21H23M12,6L19.53,19H4.47</Geometry>
-    <Geometry x:Key="GEO.CLOSE">M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z</Geometry>
+    <Style TargetType="{x:Type Border}" x:Key="TITLEBAR">
+        <Setter Property="Height" Value="50"/>
+        <Setter Property="Margin" Value="0.5"/>
+        <Setter Property="Background" Value="#242424"/>
+    </Style>
 
-    <Style TargetType="{x:Type Border}" x:Key="SQUARE">
-        <Setter Property="BorderThickness" Value="0.5"/>
-        <Setter Property="UseLayoutRounding" Value="True"/>
-        <Setter Property="SnapsToDevicePixels" Value="True"/>
-        <Setter Property="Background" Value="#262626"/>
+    <Style TargetType="{x:Type TextBlock}" x:Key="TITLE">
+        <Setter Property="Text" Value="TicTacToe WPF"/>
+        <Setter Property="Foreground" Value="#FFFFFF"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="15 0 0 0"/>
     </Style>
     
-    <Style TargetType="{x:Type ListBoxItem}" x:Key="SCOREITEM">
-        <Setter Property="Margin" Value="4"/>
-        <Setter Property="Background" Value="#292929"/>
+    <Style TargetType="{x:Type Control}" x:Key="SCORE">
+        <Setter Property="Background" Value="#272727"/>
         <Setter Property="Template">
-			<Setter.Value>
-				<ControlTemplate TargetType="ListBoxItem">
-					<Border BorderThickness="0" BorderBrush="#0AFFFFFF" CornerRadius="50"
-                            Height="{Binding RelativeSource={RelativeSource Self}, Path=ActualWidth}">
-						<Grid VerticalAlignment="Center" HorizontalAlignment="Center">
-							<Grid.RowDefinitions>
-								<RowDefinition/>
-								<RowDefinition/>
-							</Grid.RowDefinitions>
-                            <Viewbox Width="20" Height="20">
-                                <Path x:Name="path" Width="24" Height="24" Data="{StaticResource GEO.CLOSE}" Fill="#666666"/>
-                            </Viewbox>
-						</Grid>
-					</Border>
-                    <ControlTemplate.Triggers>
-                        <DataTrigger Binding="{Binding}" Value="W">
-                            <Setter TargetName="path" Property="Data" Value="{StaticResource GEO.CHECK}"/>
-                            <Setter TargetName="path" Property="Fill" Value="YELLOW"/>
-                            <Setter Property="Background" Value="#292929"/>
-                        </DataTrigger>
-                        <DataTrigger Binding="{Binding}" Value="D">
-                            <Setter TargetName="path" Property="Data" Value="{StaticResource GEO.TRIANGLE}"/>
-                            <Setter TargetName="path" Property="Fill" Value="#FFFFFF"/>
-                            <Setter Property="Background" Value="#292929"/>
-                        </DataTrigger>
-                    </ControlTemplate.Triggers>
-				</ControlTemplate>
-			</Setter.Value>
-		</Setter>
-	</Style>
-
-	<Style TargetType="{x:Type ListBox}" x:Key="SCORE">
-		<Setter Property="Margin" Value="0"/>
-        <Setter Property="Height" Value="50"/>
-        <Setter Property="ItemContainerStyle" Value="{StaticResource SCOREITEM}"/>
-		<Setter Property="Template">
-			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type ListBox}">
-                    <Border BorderThickness="0 0 0 0" 
-							BorderBrush="#22FFFFFF">
-                        <Grid>
-                            <UniformGrid Columns="3">
-                                <Border Style="{StaticResource SQUARE}"/>
-                                <Border Style="{StaticResource SQUARE}"/>
-                                <Border Style="{StaticResource SQUARE}"/>
-                            </UniformGrid>
-                            <ItemsPresenter/>
-                        </Grid>
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Control}">
+                    <Border Margin="0.5" Background="{TemplateBinding Background}">
+                        <TextBlock Text="{Binding}" 
+                                   HorizontalAlignment="Center" 
+                                   VerticalAlignment="Center"
+                                   Foreground="#FFFFFF" 
+                                   FontWeight="Bold"
+                                   FontSize="60" />
                     </Border>
-				</ControlTemplate>
-			</Setter.Value>
-		</Setter>
-		<Setter Property="ItemsPanel">
-			<Setter.Value>
-				<ItemsPanelTemplate>
-					<UniformGrid Columns="3"/>
-				</ItemsPanelTemplate>
-			</Setter.Value>
-		</Setter>
-	</Style>
-
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
 	<Style TargetType="{x:Type views:GameView}">
 		<Setter Property="Background" Value="#333333"/>
 		<Setter Property="SizeToContent" Value="WidthAndHeight"/>
@@ -88,7 +43,6 @@
 					<Border Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
-							
 							Width="600"
 							Height="300">
 						<Grid>
@@ -103,17 +57,13 @@
 								<ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
 
-                            <Border Height="50" Margin="0.5" Background="#242424" x:Name="PART_Border">
-                                <TextBlock Text="DevNcore.TicTacToeWPF" Foreground="#FFFFFF" VerticalAlignment="Center" Margin="15 0 0 0"/>
+                            <Border x:Name="PART_Border" Style="{StaticResource TITLEBAR}">
+                                <TextBlock Style="{StaticResource TITLE}"/>
                             </Border>
                             
                             <UniformGrid Grid.Row="1" Columns="2">
-                                <Border Margin="0.5" Background="#272727">
-                                    <TextBlock Text="{Binding Player1.WinCount, FallbackValue=1}" Foreground="#FFFFFF" FontSize="60" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                </Border>
-                                <Border Margin="0.5" Background="#292929">
-                                    <TextBlock Text="{Binding Player2.WinCount, FallbackValue=2}" Foreground="#FFFFFF" FontSize="60" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                </Border>
+                                <Control Style="{StaticResource SCORE}" DataContext="{Binding Player1.WinCount}"/>
+                                <Control Style="{StaticResource SCORE}" DataContext="{Binding Player2.WinCount}"/>
                             </UniformGrid>
 
                             <UniformGrid Grid.Row="2" Columns="2">
@@ -121,8 +71,8 @@
                                 <units:PlayerCard DataContext="{Binding Player2}"/>
                             </UniformGrid>
                             <UniformGrid Grid.Row="3" Columns="2">
-                                <ListBox Style="{StaticResource SCORE}" ItemsSource="{Binding Player1.Result}"/>
-                                <ListBox Style="{StaticResource SCORE}" ItemsSource="{Binding Player2.Result}"/>
+                                <units:ScoreBox ItemsSource="{Binding Player1.Result}"/>
+                                <units:ScoreBox ItemsSource="{Binding Player2.Result}"/>
                             </UniformGrid>
                             <units:GameBoard Grid.RowSpan="4" Grid.Column="1"/>
 						</Grid>

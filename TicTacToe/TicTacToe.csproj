@@ -8,6 +8,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Local\Converter\**" />
+    <EmbeddedResource Remove="Local\Converter\**" />
+    <None Remove="Local\Converter\**" />
+    <Page Remove="Local\Converter\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Themes\Controls\ScoreBoxItem.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Controls\ScoreBox.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Themes\Controls\GameBoardItem.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
@@ -24,10 +39,6 @@
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Local\Converter\" />
   </ItemGroup>
 
 </Project>
