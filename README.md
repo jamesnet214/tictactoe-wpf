@@ -4,7 +4,7 @@
 - [개발 환경](#개발-환경)
 - [학습 가이드](#학습-가이드)
 - [WPF](#wpf)
-- [Custom Control](#custom-control)
+- [MVVM](#mvvm)
 
 <br>
   
