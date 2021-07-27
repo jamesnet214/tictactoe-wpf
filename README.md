@@ -9,6 +9,7 @@
 <br>
   
 ## 개요
+![image](https://user-images.githubusercontent.com/74305823/127083957-5eb3dd2d-d032-4128-9681-d754849b2698.png)
 
 > 틱택토는 두 명이 번갈아가며 O와 X를 3×3 판에 써서 같은 글자를 가로, 세로, 혹은 대각선 상에 놓이도록 하는 놀이다.  
 > [위키피디아](https://ko.wikipedia.org/wiki/%ED%8B%B1%ED%83%9D%ED%86%A0)
