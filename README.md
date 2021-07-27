@@ -1,7 +1,7 @@
 # tictactoe-wpf
-.NET 6.0
 ## Contents
 - [개요](#개요)
+- 환경
 - [학습 가이드](#학습-가이드)
 - [WPF](#wpf)
 - [Custom Control](#custom-control)
@@ -16,6 +16,13 @@
 틱택토는 게임 방식과 로직이 간단하여 연습 목적으로 만들어보기 좋은 게임입니다. <br> 또한 C, Python 등 다양한 언어로 구현된 예제들이 풍부합니다.
 
 <br>
+
+## 환경
+
+- Visual Studio 2022 Preview
+  > ![image](https://user-images.githubusercontent.com/52397976/127085632-9af789b0-58bd-4e63-be6c-30f567cf088b.png)
+
+- WPF .NET 6.0 (Core)
 
 ## 학습 가이드
 **틱택토**를 통해 학습할 수 있는 기술들은 아래와 같습니다.
