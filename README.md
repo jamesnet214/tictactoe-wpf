@@ -60,14 +60,15 @@ WPF와 MVVM의 이해가 부족하더라도 약 6시간 이내에 소스코드 �
 
 ## WPF 구조
 
-- 📁 Local  
-  로컬 기반에서 사용하는 클래스의 네임스페이스 시작점입니다.
-    - Data
-    - Mvvm
-- ViewModel
-- 📁 Themes  
-- 📁 UI
+📁 Local 
+📁 Themes  
+📁 UI
 
+**Local** 
+> 로컬 기반에서 사용하는 클래스의 네임스페이스 시작점입니다.
+- Data
+- Mvvm
+- ViewModel
 
 
 <br>
