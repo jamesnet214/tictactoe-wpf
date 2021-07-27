@@ -11,6 +11,8 @@
 
 ## WPF
 
+![image](https://user-images.githubusercontent.com/52397976/127076382-26b655e3-d198-43a4-a0b4-30042047b675.png)
+
 ## MVVM
 모델 기반의 MVVM 개발 방식을 통해 구현을 간소화 시킬 수 있습니다.
 
