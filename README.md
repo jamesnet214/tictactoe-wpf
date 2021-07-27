@@ -1,7 +1,7 @@
 # tictactoe-wpf
 ## Contents
 - [개요](#개요)
-- 환경
+- 개발 환경
 - [학습 가이드](#학습-가이드)
 - [WPF](#wpf)
 - [Custom Control](#custom-control)
@@ -17,7 +17,7 @@
 
 <br>
 
-## 환경
+## 개발 환경
 
 - Visual Studio 2022 Preview
   > ![image](https://user-images.githubusercontent.com/52397976/127085632-9af789b0-58bd-4e63-be6c-30f567cf088b.png)
