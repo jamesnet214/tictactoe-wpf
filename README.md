@@ -22,7 +22,6 @@
  
 ✔️ **WPF .NET 6.0 (Core)**  
 <br/>
-  ![image](https://user-images.githubusercontent.com/52397976/127086933-7f21d2ca-04e9-4e2e-b192-22e99b934ab9.png)
 
 ✔️ **Visual Studio 2022 Preview**  
 <br/>
