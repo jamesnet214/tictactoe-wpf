@@ -67,7 +67,7 @@ WPF와 MVVM의 이해가 부족하더라도 약 6시간 이내에 소스코드 �
 - ViewModel
 
 📁 **Themes**  
-> Generic.xaml을 포함한 리소스 분기 영역입니다.
+> Generic.xaml을 포함한 리소스 분기 영역입니다. DefaultStyleKey에 해당하는 리소스를 약속된 위치(Generic.xaml)에서 다시 한번 ResourceDictionary 파일을 통해 분기하여 관리하도록 합니다.
 - Controls
 
 📁 **UI**  
