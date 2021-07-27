@@ -1,5 +1,5 @@
 # tictactoe-wpf
-
+.NET 6.0
 ## Contents
 - [개요](#개요)
 - [학습 가이드](#학습-가이드)
