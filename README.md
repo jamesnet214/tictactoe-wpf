@@ -68,7 +68,7 @@ WPF와 MVVM의 이해가 부족하더라도 약 6시간 이내에 소스코드 �
 <br>
 
 ## MVVM
-
+아래 소스코드는 이 앱에서 사용하는 INotifyPropertyChanged를 구현한 MVVM 클래스입니다.
 ```csharp
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
