@@ -22,7 +22,7 @@
  
 ✔️ **WPF .NET Core**  
 <br/>
-[.NET 6.0 Preview](https://dotnet.microsoft.com/download/dotnet/6.0)  
+[.NET 6.0 Preview](https://dotnet.microsoft.com/download/dotnet/6.0) 릴리즈 노트
 <br/>
 
 ✔️ **Visual Studio 2022 Preview**  
