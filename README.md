@@ -22,7 +22,7 @@
 
 - CustomControl
 - Trigger
-- Mvvm
+- Mvvm 패턴
 - RelayCommand
 - Binding
 - RelativeSource
