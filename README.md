@@ -68,7 +68,7 @@ WPF와 MVVM의 이해가 부족하더라도 약 6시간 이내에 소스코드 �
 <br>
 
 ## MVVM
-ViewModel 또는 Model에서 구현하는 `OnPropertyChanged`는 `INotifyPropertyChanged` 인터페이스를 직접 구현한 `ObservableObject`를 상속받아 사용하고 있습니다.
+MVVM을 사용하기 위해 별도의 외부 라이브러리 없이 'INotifyPropertyChanged` 인터페이스를 직접 구현한 `ObservableObject`를 사용합니다.
 ```csharp
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
