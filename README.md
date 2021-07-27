@@ -28,6 +28,7 @@
 - RelativeSource
 - Geometry
 - Application
+- Hex Color
 
 ### 숙련자
 C#과 WPF를 접해본 개발자라면 약 2시간 이내에 소스코드 전체를 작성하고 실행시킬 수 있습니다.
