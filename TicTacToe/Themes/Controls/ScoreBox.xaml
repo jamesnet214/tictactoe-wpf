@@ -3,7 +3,7 @@
                     xmlns:units="clr-namespace:TicTacToe.UI.Units">
 
     <Style TargetType="{x:Type Border}" x:Key="SQUARE">
-        <Setter Property="BorderThickness" Value="0.5"/>
+        <Setter Property="Margin" Value="0.5"/>
         <Setter Property="UseLayoutRounding" Value="True"/>
         <Setter Property="SnapsToDevicePixels" Value="True"/>
         <Setter Property="Background" Value="#262626"/>

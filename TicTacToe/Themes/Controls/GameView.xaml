@@ -37,21 +37,25 @@
 	<Style TargetType="{x:Type views:GameView}">
 		<Setter Property="Background" Value="#333333"/>
 		<Setter Property="SizeToContent" Value="WidthAndHeight"/>
+		<Setter Property="SnapsToDevicePixels" Value="True"/>
+		<Setter Property="UseLayoutRounding" Value="True"/>
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type views:GameView}">
 					<Border Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
+							UseLayoutRounding="{TemplateBinding UseLayoutRounding}"
+							SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
 							Width="600"
 							Height="300">
 						<Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="Auto"/>
-                            </Grid.RowDefinitions>
+								<RowDefinition Height="Auto"/>
+								<RowDefinition Height="*"/>
+								<RowDefinition Height="Auto"/>
+							</Grid.RowDefinitions>
 							<Grid.ColumnDefinitions>
 								<ColumnDefinition Width="*"/>
 								<ColumnDefinition Width="*"/>
@@ -59,21 +63,23 @@
 
                             <Border x:Name="PART_Border" Style="{StaticResource TITLEBAR}">
                                 <TextBlock Style="{StaticResource TITLE}"/>
-                            </Border>
-                            
-                            <UniformGrid Grid.Row="1" Columns="2">
+							</Border>
+							
+							<UniformGrid Grid.Row="1" Columns="2">
+								<units:PlayerCard DataContext="{Binding Player1}"/>
+								<units:PlayerCard DataContext="{Binding Player2}"/>
+							</UniformGrid>
+
+							<UniformGrid Grid.Row="3" Columns="2">
+								<units:ScoreBox ItemsSource="{Binding Player1.Result}"/>
+								<units:ScoreBox ItemsSource="{Binding Player2.Result}"/>
+							</UniformGrid>
+
+							<UniformGrid Grid.Row="2" Columns="2">
                                 <Control Style="{StaticResource SCORE}" DataContext="{Binding Player1.WinCount}"/>
                                 <Control Style="{StaticResource SCORE}" DataContext="{Binding Player2.WinCount}"/>
                             </UniformGrid>
-
-                            <UniformGrid Grid.Row="2" Columns="2">
-                                <units:PlayerCard DataContext="{Binding Player1}"/>
-                                <units:PlayerCard DataContext="{Binding Player2}"/>
-                            </UniformGrid>
-                            <UniformGrid Grid.Row="3" Columns="2">
-                                <units:ScoreBox ItemsSource="{Binding Player1.Result}"/>
-                                <units:ScoreBox ItemsSource="{Binding Player2.Result}"/>
-                            </UniformGrid>
+							
                             <units:GameBoard Grid.RowSpan="4" Grid.Column="1"/>
 						</Grid>
 					</Border>
