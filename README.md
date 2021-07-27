@@ -60,20 +60,20 @@ WPF와 MVVM의 이해가 부족하더라도 약 6시간 이내에 소스코드 �
 
 ## WPF 구조
  
-📁 **Themes**  
-> Generic.xaml을 포함한 리소스 분기 영역입니다.
-- Controls
-- 
-📁 **UI**  
-> DeafultStyleKey를 포함하는 CustomControl 영역입니다.
-- Units
-- Views
-
 📁 **Local**  
 > 로컬 기반에서 필요한 클래스 영역입니다.
 - Data
 - Mvvm
 - ViewModel
+
+📁 **Themes**  
+> Generic.xaml을 포함한 리소스 분기 영역입니다.
+- Controls
+
+📁 **UI**  
+> DeafultStyleKey를 포함하는 CustomControl 영역입니다.
+- Units
+- Views
 
 
 <br>
