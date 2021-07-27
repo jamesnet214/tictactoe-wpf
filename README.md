@@ -23,8 +23,8 @@
 ✔️ **WPF .NET 6.0 (Core)**  
   TBD..
   
-✔️ **Visual Studio 2022 Preview**
-  <br/>
+✔️ **Visual Studio 2022 Preview**  
+<br/>
   ![image](https://user-images.githubusercontent.com/52397976/127085632-9af789b0-58bd-4e63-be6c-30f567cf088b.png)
 
 <br>
