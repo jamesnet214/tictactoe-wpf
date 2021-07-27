@@ -21,8 +21,9 @@
 > 해당 오픈소스의 주요 개발 환경은 아래와 같습니다. 
  
 ✔️ **WPF .NET 6.0 (Core)**  
-  TBD..
-  
+<br/>
+  ![image](https://user-images.githubusercontent.com/52397976/127086933-7f21d2ca-04e9-4e2e-b192-22e99b934ab9.png)
+
 ✔️ **Visual Studio 2022 Preview**  
 <br/>
   ![image](https://user-images.githubusercontent.com/52397976/127085632-9af789b0-58bd-4e63-be6c-30f567cf088b.png)
