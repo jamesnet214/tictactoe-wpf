@@ -32,20 +32,20 @@
 **틱택토**를 통해 학습할 수 있는 기술들은 아래와 같습니다.
 - [x] CustomControl
 - [x] Trigger
-- Mvvm 패턴
-- DataContext
-- RelayCommand
-- Binding
-- RelativeSource
-- ListBox / ListBoxItem
-- ItemsPresenter
-- ContentPresenter
-- GetContainerForItemOverride
-- OnApplyTemplate
-- Geometry
-- Hex Color
-- Transparent
-- Application
+- [x] Mvvm 패턴
+- [x] DataContext
+- [x] RelayCommand
+- [x] Binding
+- [x] RelativeSource
+- [x] ListBox / ListBoxItem
+- [x] ItemsPresenter
+- [x] ContentPresenter
+- [x] GetContainerForItemOverride
+- [x] OnApplyTemplate
+- [x] Geometry
+- [x] Hex Color
+- [x] Transparent
+- [x] Application
 
 실제로 WPF는 생각보다 단순합니다. TBD..
 
