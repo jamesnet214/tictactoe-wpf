@@ -68,7 +68,23 @@ WPF와 MVVM의 이해가 부족하더라도 약 6시간 이내에 소스코드 �
 <br>
 
 ## MVVM
-모델 기반의 MVVM 개발 방식을 통해 구현을 간소화할 수 있습니다.
+
+```csharp
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+
+namespace TicTacToe.Local.Mvvm
+{
+	public class ObservableObject : INotifyPropertyChanged
+	{
+		public event PropertyChangedEventHandler PropertyChanged;
+		protected void OnPropertyChanged([CallerMemberName] string name = null)
+		{
+			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+		}
+	}
+}
+```
 
 <br>
 
