@@ -36,7 +36,7 @@
 - [x] DataContext
 - [x] RelayCommand
 - [x] Binding
-- [x] RelativeSource
+- [x] RelativeSource TemplatedParent
 - [x] ListBox / ListBoxItem
 - [x] ItemsPresenter
 - [x] ContentPresenter
@@ -47,7 +47,7 @@
 - [x] Transparent
 - [x] Application
 
-실제로 WPF는 생각보다 단순합니다. TBD..
+WPF의 중요한 요소들을 이 앱을 통해 풍부하게 학습할 수 있습니다.
 
 ### 숙련자
 C#과 WPF를 접해본 개발자라면 약 2시간 이내에 소스코드 전체를 작성하고 실행시킬 수 있습니다.
