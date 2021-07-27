@@ -30,7 +30,7 @@
 
 ## 학습 가이드
 **틱택토**를 통해 학습할 수 있는 기술들은 아래와 같습니다.
-- CustomControl
+[x] CustomControl
 - Trigger
 - Mvvm 패턴
 - DataContext
