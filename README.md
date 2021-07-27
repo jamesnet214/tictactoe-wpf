@@ -60,11 +60,17 @@ WPF와 MVVM의 이해가 부족하더라도 약 6시간 이내에 소스코드 �
 
 ## WPF 구조
  
-📁 Themes  
-📁 UI
+📁 **Themes**  
+> Generic.xaml을 포함한 리소스 분기
+- Controls
+- 
+📁 **UI**  
+> CustomControl
+- Units
+- Views
 
-📁 **Local** 
-> 로컬 기반에서 사용하는 클래스의 네임스페이스 시작점입니다.
+📁 **Local**  
+> 로컬 기반에서 필요한 클래스(네임스페이스)
 - Data
 - Mvvm
 - ViewModel
