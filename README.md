@@ -59,8 +59,8 @@ WPF와 MVVM의 이해가 부족하더라도 약 6시간 이내에 소스코드 �
 
 ## WPF 구조
 
-📁 Themes  
 📁 Local  
+📁 Themes  
 📁 UI
 
 ![image](https://user-images.githubusercontent.com/52397976/127076382-26b655e3-d198-43a4-a0b4-30042047b675.png)
