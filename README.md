@@ -61,13 +61,15 @@ WPF와 MVVM의 이해가 부족하더라도 약 6시간 이내에 소스코드 �
 ## WPF 구조
 
 📁 Local  
-  <br/>
-  ### Local
-  로컬 기반에서 사용하는 모든 네임스페이스는 이 위치에서부터 시작됩니다.
 📁 Themes  
 📁 UI
 
+<br>
 
+### Local
+로컬 기반에서 사용하는 모든 네임스페이스는 이 위치에서부터 시작됩니다.
+
+<br>
 
 ![image](https://user-images.githubusercontent.com/52397976/127076382-26b655e3-d198-43a4-a0b4-30042047b675.png)
 
