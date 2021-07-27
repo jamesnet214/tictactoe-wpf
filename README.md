@@ -68,7 +68,8 @@ WPF와 MVVM의 이해가 부족하더라도 약 6시간 이내에 소스코드 �
 <br>
 
 ## MVVM
-MVVM을 사용하기 위해 별도의 외부 라이브러리 없이 'INotifyPropertyChanged` 인터페이스를 직접 구현한 `ObservableObject`를 사용합니다.
+MVVM 패턴을 사용하기 위해서는 **INotifyPropertyChanged**가 구현된 클래스가 필요합니다. 해당 앱에서는 별도의 라이브러리를 사용하지 않고 직접 로컬에 구현해서 사용합니다.
+### ObservableObject
 ```csharp
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
