@@ -68,7 +68,7 @@ WPF와 MVVM의 이해가 부족하더라도 약 6시간 이내에 소스코드 �
 <br>
 
 ## MVVM
-`틱택토` 앱은 `INotifyPropertyChanged`를 구현한 기본 클래스를 사용합니다.
+ViewModel 또는 Model에서 구현할 `OnPropertyChanged`는 `INotifyPropertyChanged` 인터페이스를 구현한 ObservableObject를 사용합니다.
 ```csharp
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
