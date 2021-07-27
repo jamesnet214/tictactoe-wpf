@@ -18,11 +18,14 @@
 <br>
 
 ## 개발 환경
+> 오픈소스 기여자의 주요 환경을 소개합니다. 꼭 동일한 셋팅과 환경에서 실행할 필요는 없습니다.
+ 
+- WPF .NET 6.0 (Core)  
+  TBD..
+- Visual Studio 2022 Preview  
+  <br/>
+  ![image](https://user-images.githubusercontent.com/52397976/127085632-9af789b0-58bd-4e63-be6c-30f567cf088b.png)
 
-- Visual Studio 2022 Preview
-  > ![image](https://user-images.githubusercontent.com/52397976/127085632-9af789b0-58bd-4e63-be6c-30f567cf088b.png)
-
-- WPF .NET 6.0 (Core)
 
 ## 학습 가이드
 **틱택토**를 통해 학습할 수 있는 기술들은 아래와 같습니다.
