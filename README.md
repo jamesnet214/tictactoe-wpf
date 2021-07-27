@@ -71,7 +71,7 @@ WPF와 MVVM의 이해가 부족하더라도 약 6시간 이내에 소스코드 �
 - Controls
 
 📁 **UI**
-DeafultStyleKey를 포함하는 CustomControl 영역입니다. `Units` 폴더는 ListBox, ListBoxItem, Button 등과 같이 하위 요소 수준의 컨트롤 객체를 포함합니다. 그리고 `Views` 폴더는 Window, UserControl, ContentControl과 같이 UI 레이아웃을 담당할 수 있는`ContentPresenter` 객체를 포함합니다.
+> DeafultStyleKey를 포함하는 CustomControl 영역입니다. `Units` 폴더는 ListBox, ListBoxItem, Button 등과 같이 하위 요소 수준의 컨트롤 객체를 포함합니다. 그리고 `Views` 폴더는 Window, UserControl, ContentControl과 같이 UI 레이아웃을 담당할 수 있는`ContentPresenter` 객체를 포함합니다.
 - Units
 - Views
 
