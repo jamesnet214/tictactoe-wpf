@@ -61,11 +61,12 @@ WPF와 MVVM의 이해가 부족하더라도 약 6시간 이내에 소스코드 �
 ## WPF 구조
 이 샘플 소스코드 구조는 아래와 같이 명확한 규칙을 통해 이루어져있습니다.
  
-📁 **Local**  
+### Local
 > 로컬 기반에서 필요한 클래스 영역입니다. 모델, 컨버터, 각종 Helper, Mvvm에 필요한 모듈, ViewModel 등 로컬에서 필요한 모든 클래스를 이 위치에서 관리합니다.
-- Data
-- Mvvm
-- ViewModel
+📁 Local
+  - Data
+  - Mvvm
+  - ViewModel
 
 📁 **Themes**  
 > Generic.xaml을 포함한 리소스 분기 영역입니다. DefaultStyleKey에 해당하는 리소스를 약속된 위치(Generic.xaml)에서 다시 한번 ResourceDictionary 파일을 통해 분기하여 관리하도록 합니다.
