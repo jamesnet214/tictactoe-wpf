@@ -20,8 +20,9 @@
 ## 개발 환경
 > 해당 오픈소스의 주요 개발 환경은 아래와 같습니다. 
  
-✔️ **WPF .NET 6.0 (Core)**  
+✔️ **WPF .NET**  
 <br/>
+[.NET 6.0 Preview](https://dotnet.microsoft.com/download/dotnet/6.0)
 
 ✔️ **Visual Studio 2022 Preview**  
 <br/>
