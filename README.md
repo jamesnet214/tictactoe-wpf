@@ -11,8 +11,7 @@
 ## 개요
 ![image](https://user-images.githubusercontent.com/74305823/127083957-5eb3dd2d-d032-4128-9681-d754849b2698.png)
 
-> 틱택토는 두 명이 번갈아가며 O와 X를 3×3 판에 써서 같은 글자를 가로, 세로, 혹은 대각선 상에 놓이도록 하는 놀이다.  
-> [위키피디아](https://ko.wikipedia.org/wiki/%ED%8B%B1%ED%83%9D%ED%86%A0)
+> 틱택토는 두 명이 번갈아가며 O와 X를 3×3 판에 써서 같은 글자를 가로, 세로, 혹은 대각선 상에 놓이도록 하는 놀이다. &nbsp;  - [Wikipedia](https://ko.wikipedia.org/wiki/%ED%8B%B1%ED%83%9D%ED%86%A0)
 
 틱택토는 게임 방식과 로직이 간단하여 연습 목적으로 만들어보기 좋은 게임입니다. <br> 또한 C, Python 등 다양한 언어로 구현된 예제들이 풍부합니다.
 
