@@ -64,7 +64,7 @@ WPF의 중요한 핵심 기술들을 이 앱을 통해 깊이있게 학습할 �
 - [UI](#ui)
  
 ## Local
-로컬 기반에서 필요한 클래스 영역입니다. 모델, 컨버터, 각종 Helper, Mvvm에 필요한 모듈, ViewModel 등 로컬에서 필요한 모든 클래스를 이 위치에서 관리합니다.
+로컬 기반에서 필요한 클래스 영역입니다. Model, Converter, 각종 Helper, Mvvm에 필요한 모듈, ViewModel 등 로컬에서 필요한 모든 클래스를 이 위치에서 관리합니다.
 
 📁 Local
 - Data
@@ -96,6 +96,7 @@ DeafultStyleKey를 포함하는 CustomControl 영역입니다. `Units` 폴더는
 
 ## MVVM
 MVVM 패턴을 사용하기 위해서는 **INotifyPropertyChanged**가 구현된 클래스가 필요합니다. 해당 앱에서는 별도의 라이브러리를 사용하지 않고 기본으로 필요한 메서드만 로컬에 구현해서 사용합니다.
+
 ### ObservableObject
 ```csharp
 using System.ComponentModel;
