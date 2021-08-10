@@ -17,6 +17,7 @@
 틱택토는 게임 방식과 로직이 간단하여 연습 목적으로 만들어보기 좋은 게임입니다. <br> 또한 C, Python 등 다양한 언어로 구현된 예제들이 풍부합니다.
 
 이제 WPF로 구현한 **틱택토**를 함께 즐겨보시기 바랍니다!
+
 <br>
 
 ## 개발 환경
@@ -104,7 +105,7 @@ DeafultStyleKey를 포함하는 CustomControl 영역입니다. **`Units`** 폴�
 ## MVVM
 MVVM 패턴을 사용하기 위해서는 **INotifyPropertyChanged**가 구현된 클래스가 필요합니다. 해당 앱에서는 별도의 라이브러리를 사용하지 않고 기본으로 필요한 메서드만 로컬에 구현해서 사용합니다.
 
-### ObservableObject
+### `ObservableObject`
 ```csharp
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
