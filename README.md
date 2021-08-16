@@ -103,7 +103,7 @@ DeafultStyleKey를 포함하는 CustomControl 영역입니다. **`Units`** 폴�
 <br>
 
 ## MVVM
-MVVM 패턴을 사용하기 위해서는 **INotifyPropertyChanged**가 구현된 클래스가 필요합니다. 해당 앱에서는 별도의 라이브러리를 사용하지 않고 기본으로 필요한 메서드만 로컬에 구현해서 사용합니다.
+MVVM 패턴을 사용하기 위해서는 **INotifyPropertyChanged**가 구현된 클래스가 필요합니다. 해당 앱에서는 별도의 라이브러리를 사용하지 않고 기본적으로 필요한 메서드만 로컬에 구현해서 사용합니다.
 
 ### `ObservableObject`
 ```csharp
