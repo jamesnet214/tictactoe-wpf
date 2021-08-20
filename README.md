@@ -126,4 +126,4 @@ namespace TicTacToe.Local.Mvvm
 <br>
 
 ## ScreenShot
-![image](https://user-images.githubusercontent.com/52397976/127074738-ed10f727-207b-467c-ab39-6113578caae6.png)
+![image](https://user-images.githubusercontent.com/74305823/130179419-58d5ac1e-b037-4882-9219-525c5bd39f2b.png)
