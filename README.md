@@ -98,7 +98,7 @@ Generic.xaml을 포함한 리소스 분기 영역입니다. DefaultStyleKey에 �
 ### `UI`
 DeafultStyleKey를 포함하는 CustomControl 영역입니다. **`Units`** 폴더는 ListBox, ListBoxItem, Button 등과 같이 하위 요소 수준의 컨트롤 객체를 포함합니다. 그리고 **`Views`** 폴더는 Window, UserControl, ContentControl과 같이 UI 레이아웃을 담당할 수 있는 ContentPresenter 객체를 포함합니다.
 
-![image](https://user-images.githubusercontent.com/52397976/127076382-26b655e3-d198-43a4-a0b4-30042047b675.png)
+![image](https://user-images.githubusercontent.com/74305823/130185299-2ba6eac6-04e6-4bce-9871-d6d173b3d4d2.png)
 
 <br>
 
