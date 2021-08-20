@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows;
-using TicTacToe.Local.VIewModel;
+using TicTacToe.Local.ViewModel;
 using TicTacToe.UI.Views;
 
 namespace TicTacToe

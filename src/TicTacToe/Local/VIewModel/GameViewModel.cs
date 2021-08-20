@@ -3,7 +3,7 @@ using System.Windows.Input;
 using TicTacToe.Local.Data;
 using TicTacToe.Local.Mvvm;
 
-namespace TicTacToe.Local.VIewModel
+namespace TicTacToe.Local.ViewModel
 {
 	public class GameViewModel : ObservableObject
 	{
