@@ -10,11 +10,13 @@
     </Style>
 
     <Style TargetType="{x:Type TextBlock}" x:Key="TITLE">
-        <Setter Property="Text" Value="TicTacToe WPF"/>
+        <Setter Property="Text" Value="Tic Tac Toe"/>
         <Setter Property="Foreground" Value="#FFFFFF"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="Margin" Value="15 0 0 0"/>
-    </Style>
+		<Setter Property="FontSize" Value="16"/>
+		<Setter Property="FontWeight" Value="Bold"/>
+	</Style>
     
     <Style TargetType="{x:Type Control}" x:Key="SCORE">
         <Setter Property="Background" Value="#272727"/>
@@ -70,16 +72,16 @@
 								<units:PlayerCard DataContext="{Binding Player2}"/>
 							</UniformGrid>
 
+							<UniformGrid Grid.Row="2" Columns="2">
+								<Control Style="{StaticResource SCORE}" DataContext="{Binding Player1.WinCount}"/>
+								<Control Style="{StaticResource SCORE}" DataContext="{Binding Player2.WinCount}"/>
+							</UniformGrid>
+
 							<UniformGrid Grid.Row="3" Columns="2">
 								<units:ScoreBox ItemsSource="{Binding Player1.Result}"/>
 								<units:ScoreBox ItemsSource="{Binding Player2.Result}"/>
 							</UniformGrid>
 
-							<UniformGrid Grid.Row="2" Columns="2">
-                                <Control Style="{StaticResource SCORE}" DataContext="{Binding Player1.WinCount}"/>
-                                <Control Style="{StaticResource SCORE}" DataContext="{Binding Player2.WinCount}"/>
-                            </UniformGrid>
-							
                             <units:GameBoard Grid.RowSpan="4" Grid.Column="1"/>
 						</Grid>
 					</Border>

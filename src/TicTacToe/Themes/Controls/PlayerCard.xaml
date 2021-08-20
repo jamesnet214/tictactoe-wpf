@@ -2,39 +2,25 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 					xmlns:units="clr-namespace:TicTacToe.UI.Units">
 
-	<Geometry x:Key="GEO.PEOPLE">M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z</Geometry>
 	<Geometry x:Key="GEO.PLAY">M8,5.14V19.14L19,12.14L8,5.14Z</Geometry>
 
-	<Style TargetType="{x:Type Control}" x:Key="PEOPLE">
+	<Style TargetType="{x:Type Control}" x:Key="PLAY">
+		<Setter Property="Grid.Column" Value="0"/>
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type Control}">
-					<Grid Margin="10 10 0 10">
-						<Ellipse Fill="#FFFFFF"/>
-						<Viewbox Width="29" Height="29">
+					<Grid Margin="7 0 0 0">
+						<Viewbox Width="30" Height="30">
 							<Canvas Width="24" Height="24">
-								<Path Fill="#AAAAAA" Data="{StaticResource GEO.PEOPLE}" />
+								<Path x:Name="icon" Fill="#4D4D4D" Data="{StaticResource GEO.PLAY}" />
 							</Canvas>
 						</Viewbox>
 					</Grid>
-				</ControlTemplate>
-			</Setter.Value>
-		</Setter>
-	</Style>
-
-    <Style TargetType="{x:Type Control}" x:Key="PLAY">
-		<Setter Property="Visibility" Value="Hidden"/>
-		<Setter Property="Grid.Column" Value="2"/>
-		<Setter Property="Template">
-			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type Control}">
-					<Grid Margin="10 10 10 10">
-						<Viewbox Width="25" Height="25">
-							<Canvas Width="24" Height="24">
-                                <Path Fill="#FFFFFF" Data="{StaticResource GEO.PLAY}" />
-							</Canvas>
-						</Viewbox>
-					</Grid>
+					<ControlTemplate.Triggers>
+						<DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=units:PlayerCard}, Path=DataContext.IsTurn}" Value="true">
+							<Setter TargetName="icon" Property="Fill" Value="#EEFF38"/>
+						</DataTrigger>
+					</ControlTemplate.Triggers>
 				</ControlTemplate>
 			</Setter.Value>
 		</Setter>
@@ -46,8 +32,10 @@
 		<Setter Property="CaretBrush" Value="#FFFFFF"/>
 		<Setter Property="Foreground" Value="#FFFFFF"/>
 		<Setter Property="Text" Value="{Binding PlayerName}"/>
+		<Setter Property="FontSize" Value="14"/>
+		<Setter Property="HorizontalAlignment" Value="Left"/>
 		<Setter Property="VerticalContentAlignment" Value="Center"/>
-		<Setter Property="Padding" Value="5"/>
+		<Setter Property="Padding" Value="0 7 0 7"/>
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type TextBox}">
@@ -57,18 +45,21 @@
 							<TextBlock x:Name="txb"
 									   Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Text}"
 									   VerticalAlignment="Center"
-									   Margin="7 0 0 0"/>
+									   Margin="10 0 0 0"/>
 							<ScrollViewer x:Name="PART_ContentHost"
-										  Margin="0"
+										  Margin="0 0 0 0"
 										  VerticalAlignment="Center"
-										  Padding="0" Visibility="Hidden"/>
+										  Padding="0 0 0 0" 
+										  Visibility="Hidden"/>
 						</Grid>
 					</Border>
 					<ControlTemplate.Triggers>
 						<Trigger Property="IsMouseOver" Value="True">
+							<Setter Property="Cursor" Value="IBeam"/>
 						</Trigger>
 						<Trigger Property="IsKeyboardFocusWithin" Value="True">
 							<Setter TargetName="txb" Property="Visibility" Value="Collapsed"/>
+							<Setter Property="Margin" Value="8 0 0 0"/>
 							<Setter TargetName="PART_ContentHost" Property="Visibility" Value="Visible"/>
 						</Trigger>
 					</ControlTemplate.Triggers>
@@ -76,18 +67,10 @@
 			</Setter.Value>
 		</Setter>
 	</Style>
-
-	<Style TargetType="{x:Type TextBlock}" x:Key="DISPLAY">
-		<Setter Property="Grid.Column" Value="1"/>
-		<Setter Property="Text" Value="{Binding PlayerName}"/>
-		<Setter Property="VerticalAlignment" Value="Center"/>
-		<Setter Property="Padding" Value="10"/>
-	</Style>
 	
 	<Style TargetType="{x:Type units:PlayerCard}">
 		<Setter Property="Background" Value="#2B2B2B"/>
 		<Setter Property="Foreground" Value="#FFFFFF"/>
-		<Setter Property="Margin" Value="0.5"/>
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type units:PlayerCard}">
@@ -98,21 +81,14 @@
 							<Grid.ColumnDefinitions>
 								<ColumnDefinition Width="Auto"/>
 								<ColumnDefinition Width="*"/>
-								<ColumnDefinition Width="Auto"/>
 							</Grid.ColumnDefinitions>
-							<Control Style="{StaticResource PEOPLE}"/>
+							<Control x:Name="turn" Style="{StaticResource PLAY}"/>
 							<TextBox x:Name="txt" Style="{StaticResource EDIT}"/>
-                            <Control x:Name="chk" Style="{StaticResource PLAY}"/>
 						</Grid>
 					</Border>
 					<ControlTemplate.Triggers>
-						<Trigger Property="IsMouseOver" Value="True">
-							<Setter Property="Background" Value="#FF2A59AA"/>
-							<Setter Property="Background" Value="#33000000"/>
-						</Trigger>
 						<DataTrigger Binding="{Binding IsTurn}" Value="True">
-							<Setter Property="Background" Value="#FF3B5881"/>
-							<Setter TargetName="chk" Property="Visibility" Value="Visible"/>
+							<Setter Property="Background" Value="#FF4D4D4D"/>
 						</DataTrigger>
 					</ControlTemplate.Triggers>
 				</ControlTemplate>
