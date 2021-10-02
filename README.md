@@ -47,7 +47,7 @@
 <br/>
 [![image](https://user-images.githubusercontent.com/52397976/127085632-9af789b0-58bd-4e63-be6c-30f567cf088b.png)](https://devblogs.microsoft.com/visualstudio/visual-studio-2022-preview-1-now-available/)
 
-<br>
+<br />
 
 ## 학습 가이드
 
@@ -75,7 +75,7 @@
 
 WPF의 중요한 핵심 기술들을 이 앱을 통해 깊이있게 학습할 수 있습니다.
 
-<br>
+<br />
 
 ## WPF 구조
 소스코드는 **`Local`** **`Themes`** **`UI`** 3개의 폴더 구조로 구성되어 있습니다. 각각의 폴더는 기능, 리소스, UI를 담당합니다.
