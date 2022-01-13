@@ -1,22 +1,15 @@
-<div align=center>
-  <h2>TicTacToe WPF</h2>
-  <br/>
- 
-  이 레포지토리는 DevNcore팀이 관리하고 있습니다.
-  <br />
-  <a href="https://github.com/devncore/devncore"><strong>더 알아보기 »</strong></a>
- 
-  <br />
-  <br />
- 
-  <p align="center">
-   <a href="https://github.com/devncore/tictactoe-wpf/stargazers"><img src="https://img.shields.io/github/stars/devncore/tictactoe-wpf" alt="Github Stars"></a>
-   <img src="https://img.shields.io/github/license/devncore/tictactoe-wpf" alt="License">
-   <a href="https://github.com/devncore/tictactoe-wpf/pulse"><img src="https://img.shields.io/github/commit-activity/m/devncore/tictactoe-wpf" alt="Commits-per-month"></a>
- </p>
-</div>
+## TicTacToe WPF
 
-  <br />
+이 리포지토리는 TicTacToe 를 WFP로 구현한 리포지토리입니다. <br />
+이 리포지토리는 DevNcore팀이 관리하고 있습니다.  
+
+<a href="https://github.com/devncore/devncore"><strong>더 알아보기 »</strong></a>
+ 
+| Star | License | Activity |
+|:----:|:-------:|:--------:|
+| <a href="https://github.com/devncore/tictactoe-wpf/stargazers"><img src="https://img.shields.io/github/stars/devncore/tictactoe-wpf" alt="Github Stars"></a> | <img src="https://img.shields.io/github/license/devncore/tictactoe-wpf" alt="License"> | <a href="https://github.com/devncore/tictactoe-wpf/pulse"><img src="https://img.shields.io/github/commit-activity/m/devncore/tictactoe-wpf" alt="Commits-per-month"></a> |
+
+<br />
 
 ## Contents
 - [개요](#개요)
