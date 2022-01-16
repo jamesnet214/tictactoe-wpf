@@ -1,6 +1,6 @@
 ## TicTacToe WPF
 
-이 리포지토리는 TicTacToe 를 WFP로 구현한 리포지토리입니다. <br />
+이 리포지토리는 TicTacToe를 WPF로 구현한 리포지토리입니다. <br />
 
 <a href="https://github.com/devncore/devncore"><strong>더 알아보기 »</strong></a>
  
