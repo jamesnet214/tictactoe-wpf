@@ -1,11 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using DevNcore.UI.Foundation.Mvvm;
+using System.Collections.Generic;
 using System.Windows.Input;
 using TicTacToe.Local.Data;
-using TicTacToe.Local.Mvvm;
 
-namespace TicTacToe.Local.ViewModel
+namespace TicTacToe.Local.Mvvm
 {
-	public class GameViewModel : ObservableObject
+	public class MainViewModel : ObservableObject
 	{
 		#region Variables
 
@@ -53,7 +53,7 @@ namespace TicTacToe.Local.ViewModel
 
 		#region Constructor
 
-		public GameViewModel()
+		public MainViewModel()
 		{
 			SetPlayers();
 			SetSquares();

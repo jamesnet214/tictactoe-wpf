@@ -2,7 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:units="clr-namespace:TicTacToe.UI.Units">
 
-    <Style TargetType="{x:Type Border}" x:Key="SQUARE">
+    <Style TargetType="{x:Type Border}" x:Key="SquareBorderStyle">
         <Setter Property="Margin" Value="0.5"/>
         <Setter Property="UseLayoutRounding" Value="True"/>
         <Setter Property="SnapsToDevicePixels" Value="True"/>
@@ -19,9 +19,9 @@
 							BorderBrush="#22FFFFFF">
                         <Grid>
                             <UniformGrid Columns="3">
-                                <Border Style="{StaticResource SQUARE}"/>
-                                <Border Style="{StaticResource SQUARE}"/>
-                                <Border Style="{StaticResource SQUARE}"/>
+                                <Border Style="{StaticResource SquareBorderStyle}"/>
+                                <Border Style="{StaticResource SquareBorderStyle}"/>
+                                <Border Style="{StaticResource SquareBorderStyle}"/>
                             </UniformGrid>
                             <ItemsPresenter/>
                         </Grid>

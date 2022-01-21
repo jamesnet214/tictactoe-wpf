@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows;
-using TicTacToe.Local.ViewModel;
 using TicTacToe.UI.Views;
 
 namespace TicTacToe
@@ -10,11 +9,10 @@ namespace TicTacToe
 		protected override void OnStartup(StartupEventArgs e)
 		{
 			base.OnStartup(e);
+			Resources.MergedDictionaries.Add(new ResourceDictionary { Source = new Uri("/DevNcore.UI.Design.Geometry;component/Themes/Packages.xaml", UriKind.RelativeOrAbsolute) });
+			var win = new MainWindow();
 
-			GameView window = new();
-			window.DataContext = new GameViewModel();
-			window.ShowDialog();
-			Environment.Exit(0);
+			win.ShowDialog();
 		}
 	}
 }

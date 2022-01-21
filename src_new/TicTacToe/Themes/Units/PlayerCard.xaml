@@ -4,7 +4,7 @@
 
 	<Geometry x:Key="GEO.PLAY">M8,5.14V19.14L19,12.14L8,5.14Z</Geometry>
 
-	<Style TargetType="{x:Type Control}" x:Key="PLAY">
+	<Style TargetType="{x:Type Control}" x:Key="PlayControlStyle">
 		<Setter Property="Grid.Column" Value="0"/>
 		<Setter Property="Template">
 			<Setter.Value>
@@ -26,7 +26,7 @@
 		</Setter>
 	</Style>
 
-	<Style TargetType="{x:Type TextBox}" x:Key="EDIT">
+	<Style TargetType="{x:Type TextBox}" x:Key="EditTextBoxStyle">
 		<Setter Property="Grid.Column" Value="1"/>
 		<Setter Property="Background" Value="Transparent"/>
 		<Setter Property="CaretBrush" Value="#FFFFFF"/>
@@ -82,8 +82,8 @@
 								<ColumnDefinition Width="Auto"/>
 								<ColumnDefinition Width="*"/>
 							</Grid.ColumnDefinitions>
-							<Control x:Name="turn" Style="{StaticResource PLAY}"/>
-							<TextBox x:Name="txt" Style="{StaticResource EDIT}"/>
+							<Control Style="{StaticResource PlayControlStyle}"/>
+							<TextBox Style="{StaticResource EditTextBoxStyle}"/>
 						</Grid>
 					</Border>
 					<ControlTemplate.Triggers>

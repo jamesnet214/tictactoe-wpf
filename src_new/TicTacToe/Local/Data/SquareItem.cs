@@ -1,5 +1,5 @@
-﻿using System.Windows.Input;
-using TicTacToe.Local.Mvvm;
+﻿using DevNcore.UI.Foundation.Mvvm;
+using System.Windows.Input;
 
 namespace TicTacToe.Local.Data
 {
@@ -19,7 +19,6 @@ namespace TicTacToe.Local.Data
 		public SquareItem(ICommand choice)
 		{
 			ChoiceCommand = choice;
-
 		}
 	}
 }

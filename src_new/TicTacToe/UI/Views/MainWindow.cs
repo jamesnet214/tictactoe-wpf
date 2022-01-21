@@ -1,18 +1,20 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using TicTacToe.Local.Mvvm;
 
 namespace TicTacToe.UI.Views
 {
-	public class GameView : Window
+	public class MainWindow : Window
 	{
-		static GameView()
+		static MainWindow()
 		{
-			DefaultStyleKeyProperty.OverrideMetadata(typeof(GameView), new FrameworkPropertyMetadata(typeof(GameView)));
+			DefaultStyleKeyProperty.OverrideMetadata(typeof(MainWindow), new FrameworkPropertyMetadata(typeof(MainWindow)));
 		}
 
-		public GameView()
+		public MainWindow()
 		{
+			DataContext = new MainViewModel();
 			WindowStyle = WindowStyle.None;
 			AllowsTransparency = true;
 		}
@@ -27,8 +29,7 @@ namespace TicTacToe.UI.Views
 
 		private void Border_MouseMove(object sender, MouseEventArgs e)
 		{
-			if (e.LeftButton == System.Windows.Input.MouseButtonState.Pressed
-				&& sender.Equals(e.OriginalSource))
+			if (e.LeftButton == MouseButtonState.Pressed && sender.Equals(e.OriginalSource))
 			{
 				this.DragMove();
 			}

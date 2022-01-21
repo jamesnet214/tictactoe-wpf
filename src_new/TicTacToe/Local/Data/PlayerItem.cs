@@ -1,6 +1,6 @@
-﻿using System.Collections.ObjectModel;
+﻿using DevNcore.UI.Foundation.Mvvm;
+using System.Collections.ObjectModel;
 using System.Linq;
-using TicTacToe.Local.Mvvm;
 
 namespace TicTacToe.Local.Data
 {

@@ -8,34 +8,34 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Local\Converter\**" />
-    <EmbeddedResource Remove="Local\Converter\**" />
-    <None Remove="Local\Converter\**" />
-    <Page Remove="Local\Converter\**" />
+    <ProjectReference Include="..\DevNcore.UI.Design.Geometry\DevNcore.UI.Design.Geometry.csproj" />
+    <ProjectReference Include="..\DevNcore.UI.Design\DevNcore.UI.Design.csproj" />
+    <ProjectReference Include="..\DevNcore.UI.Foundation\DevNcore.UI.Foundation.csproj" />
+    <ProjectReference Include="..\DevNcore.WPF\DevNcore.WPF.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Page Update="Themes\Controls\ScoreBoxItem.xaml">
+    <Page Update="Themes\Units\ScoreBoxItem.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Controls\ScoreBox.xaml">
+    <Page Update="Themes\Units\ScoreBox.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Controls\GameBoardItem.xaml">
+    <Page Update="Themes\Units\GameBoardItem.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Controls\PlayerCard.xaml">
+    <Page Update="Themes\Units\PlayerCard.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Controls\GameView.xaml">
+    <Page Update="Themes\Views\MainWindow.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Controls\GameBoard.xaml">
+    <Page Update="Themes\Units\GameBoard.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
