@@ -15,8 +15,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:ScoreBox}">
-                    <Border BorderThickness="0 0 0 0" 
-							BorderBrush="#22FFFFFF">
+                    <Border BorderThickness="0 0 0 0" BorderBrush="#22FFFFFF">
                         <Grid>
                             <UniformGrid Columns="3">
                                 <Border Style="{StaticResource SquareBorderStyle}"/>

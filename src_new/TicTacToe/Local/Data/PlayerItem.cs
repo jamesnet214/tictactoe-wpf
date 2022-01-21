@@ -1,5 +1,6 @@
 ﻿using DevNcore.UI.Foundation.Mvvm;
 using System.Collections.ObjectModel;
+using System.Collections.Specialized;
 using System.Linq;
 
 namespace TicTacToe.Local.Data
@@ -42,7 +43,7 @@ namespace TicTacToe.Local.Data
 			Result.CollectionChanged += Result_CollectionChanged;
 		}
 
-		private void Result_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+		private void Result_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
 		{
 			WinCount = Result.Where(x => x.Equals("W")).Count();
 		}

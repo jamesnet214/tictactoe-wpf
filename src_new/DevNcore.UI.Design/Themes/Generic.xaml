@@ -44,13 +44,19 @@
         </Setter>
     </Style>
 
+    <Style TargetType="{x:Type icons:CheckIcon}" BasedOn="{StaticResource {x:Type prims:Icon}}">
+        <Setter Property="Data" Value="{StaticResource Check}"/>
+    </Style>
+    <Style TargetType="{x:Type icons:CircleIcon}" BasedOn="{StaticResource {x:Type prims:Icon}}">
+        <Setter Property="Data" Value="{StaticResource Circle}"/>
+    </Style>
     <Style TargetType="{x:Type icons:CloseIcon}" BasedOn="{StaticResource {x:Type prims:Icon}}">
         <Setter Property="Data" Value="{StaticResource Close}"/>
     </Style>
+    <Style TargetType="{x:Type icons:PlayIcon}" BasedOn="{StaticResource {x:Type prims:Icon}}">
+        <Setter Property="Data" Value="{StaticResource Play}"/>
+    </Style>
     <Style TargetType="{x:Type icons:TriangleIcon}" BasedOn="{StaticResource {x:Type prims:Icon}}">
         <Setter Property="Data" Value="{StaticResource Triangle}"/>
-    </Style>
-    <Style TargetType="{x:Type icons:CheckIcon}" BasedOn="{StaticResource {x:Type prims:Icon}}">
-        <Setter Property="Data" Value="{StaticResource Check}"/>
     </Style>
 </ResourceDictionary>

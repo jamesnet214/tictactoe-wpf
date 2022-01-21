@@ -7,60 +7,40 @@ namespace TicTacToe.Local.Mvvm
 {
 	public class MainViewModel : ObservableObject
 	{
-		#region Variables
-
 		private int _playCount;
 		private PlayerItem _player1;
 		private PlayerItem _player2;
 		private SquareItem[] _squares;
-		#endregion
-
-		#region PlayCount
 
 		public int PlayCount
 		{
 			get => _playCount;
 			set { _playCount = value; OnPropertyChanged(); }
 		}
-		#endregion
-
-		#region Squares
 
 		public SquareItem[] Squares
 		{
 			get => _squares;
 			set { _squares = value; OnPropertyChanged(); }
 		}
-		#endregion
-
-		#region Player1
 
 		public PlayerItem Player1
 		{
 			get => _player1;
 			set { _player1 = value; OnPropertyChanged(); }
 		}
-		#endregion
-
-		#region Player2	
 
 		public PlayerItem Player2
 		{
 			get => _player2;
 			set { _player2 = value; OnPropertyChanged(); }
 		}
-		#endregion
-
-		#region Constructor
 
 		public MainViewModel()
 		{
 			SetPlayers();
 			SetSquares();
 		}
-		#endregion
-
-		#region Choice
 
 		private void Choice(SquareItem square)
 		{
@@ -86,18 +66,12 @@ namespace TicTacToe.Local.Mvvm
 				Finish(Player.None);
 			}
 		}
-		#endregion
-
-		#region SetPlayers
 
 		private void SetPlayers()
 		{
 			Player1 = new("James");
 			Player2 = new("Elena");
 		}
-		#endregion
-
-		#region Finish
 
 		private void Finish(Player player)
 		{
@@ -113,9 +87,6 @@ namespace TicTacToe.Local.Mvvm
 			}
 			SetSquares();
 		}
-		#endregion
-
-		#region SetSquares
 
 		private void SetSquares()
 		{
@@ -131,15 +102,12 @@ namespace TicTacToe.Local.Mvvm
 			Player1.IsTurn = true;
 			Player2.IsTurn = false;
 		}
-		#endregion
-
-		#region CalculateWinner
 
 		private SquareItem CalculateWinner()
 		{
 			var items = Squares;
 
-			List<int[]> arrayList = new List<int[]>()
+			List<int[]> arrayList = new()
 			{
 				new int[] { 0, 1, 2 },
 				new int[] { 3, 4, 5 },
@@ -164,9 +132,7 @@ namespace TicTacToe.Local.Mvvm
 					return items[tempArray[0]];
 				}
 			}
-
 			return null;
 		}
-		#endregion
 	}
 }
