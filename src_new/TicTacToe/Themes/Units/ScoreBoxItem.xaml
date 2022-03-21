@@ -14,8 +14,8 @@
                             Height="{Binding RelativeSource={RelativeSource Self}, Path=ActualWidth}">
                         <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
                             <icons:CloseIcon Fill="#666666" Visibility="{Binding Converter={cnvts:EqualsToVisibilityConverter}, ConverterParameter=L}"/>
-                            <icons:CheckIcon Fill="#FFFF00" Visibility="{Binding Converter={cnvts:EqualsToVisibilityConverter}, ConverterParameter=W}"/>
-                            <icons:TriangleIcon Fill="#FFFFFF" Visibility="{Binding Converter={cnvts:EqualsToVisibilityConverter}, ConverterParameter=D}"/>
+                            <icons:CheckBoldIcon Fill="#FFFF00" Visibility="{Binding Converter={cnvts:EqualsToVisibilityConverter}, ConverterParameter=W}"/>
+                            <icons:TriangleOutlineIcon Fill="#FFFFFF" Visibility="{Binding Converter={cnvts:EqualsToVisibilityConverter}, ConverterParameter=D}"/>
                         </Grid>
                     </Border>
                 </ControlTemplate>

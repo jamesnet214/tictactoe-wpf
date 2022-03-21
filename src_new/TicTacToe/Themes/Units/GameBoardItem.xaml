@@ -9,7 +9,7 @@
     </DataTemplate>
 
     <DataTemplate x:Key="SecondPlayerDataTemplate">
-        <icons:CircleIcon Width="50" Height="50" Fill="#FF2B7BB2"/>
+        <icons:CircleOutlineIcon Width="50" Height="50" Fill="#FF2B7BB2"/>
     </DataTemplate>
 
     <Style TargetType="{x:Type Button}" x:Key="MarkButtonStyle">

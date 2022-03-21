@@ -8,10 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DevNcore.UI.Design.Geometry\DevNcore.UI.Design.Geometry.csproj" />
-    <ProjectReference Include="..\DevNcore.UI.Design\DevNcore.UI.Design.csproj" />
-    <ProjectReference Include="..\DevNcore.UI.Foundation\DevNcore.UI.Foundation.csproj" />
-    <ProjectReference Include="..\DevNcore.WPF\DevNcore.WPF.csproj" />
+    <PackageReference Include="DevNcore.UI.Design" Version="1.0.6" />
+    <PackageReference Include="DevNcore.UI.Design.Converter" Version="1.0.0" />
+    <PackageReference Include="DevNcore.UI.Design.Geometry" Version="1.0.6" />
+    <PackageReference Include="DevNcore.UI.Foundation" Version="1.0.2" />
+    <PackageReference Include="DevNcore.WPF" Version="1.0.3" />
   </ItemGroup>
 
   <ItemGroup>

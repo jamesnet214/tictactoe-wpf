@@ -5,16 +5,6 @@ VisualStudioVersion = 17.0.31423.177
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicTacToe", "TicTacToe\TicTacToe.csproj", "{5DA7B9EB-100B-41A2-910F-39FD879AB03E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DevNcore", "DevNcore", "{F95AEFD7-17B1-4D07-8CB8-00749620C17B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevNcore.UI.Design", "DevNcore.UI.Design\DevNcore.UI.Design.csproj", "{745AA218-83BC-43D0-8C5D-BBD01BA89F4A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevNcore.UI.Design.Geometry", "DevNcore.UI.Design.Geometry\DevNcore.UI.Design.Geometry.csproj", "{28BE36C0-AE37-4F5F-BB8D-809993254C7A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevNcore.UI.Foundation", "DevNcore.UI.Foundation\DevNcore.UI.Foundation.csproj", "{CACFFF9F-AC75-40F7-9CD3-150A3FA9B9EC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevNcore.WPF", "DevNcore.WPF\DevNcore.WPF.csproj", "{F4F5B32A-57F5-4CD1-9098-A1D6FF8E2FF2}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,31 +15,9 @@ Global
 		{5DA7B9EB-100B-41A2-910F-39FD879AB03E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5DA7B9EB-100B-41A2-910F-39FD879AB03E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5DA7B9EB-100B-41A2-910F-39FD879AB03E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{745AA218-83BC-43D0-8C5D-BBD01BA89F4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{745AA218-83BC-43D0-8C5D-BBD01BA89F4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{745AA218-83BC-43D0-8C5D-BBD01BA89F4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{745AA218-83BC-43D0-8C5D-BBD01BA89F4A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{28BE36C0-AE37-4F5F-BB8D-809993254C7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{28BE36C0-AE37-4F5F-BB8D-809993254C7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{28BE36C0-AE37-4F5F-BB8D-809993254C7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{28BE36C0-AE37-4F5F-BB8D-809993254C7A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CACFFF9F-AC75-40F7-9CD3-150A3FA9B9EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CACFFF9F-AC75-40F7-9CD3-150A3FA9B9EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CACFFF9F-AC75-40F7-9CD3-150A3FA9B9EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CACFFF9F-AC75-40F7-9CD3-150A3FA9B9EC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F4F5B32A-57F5-4CD1-9098-A1D6FF8E2FF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F4F5B32A-57F5-4CD1-9098-A1D6FF8E2FF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F4F5B32A-57F5-4CD1-9098-A1D6FF8E2FF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F4F5B32A-57F5-4CD1-9098-A1D6FF8E2FF2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{745AA218-83BC-43D0-8C5D-BBD01BA89F4A} = {F95AEFD7-17B1-4D07-8CB8-00749620C17B}
-		{28BE36C0-AE37-4F5F-BB8D-809993254C7A} = {F95AEFD7-17B1-4D07-8CB8-00749620C17B}
-		{CACFFF9F-AC75-40F7-9CD3-150A3FA9B9EC} = {F95AEFD7-17B1-4D07-8CB8-00749620C17B}
-		{F4F5B32A-57F5-4CD1-9098-A1D6FF8E2FF2} = {F95AEFD7-17B1-4D07-8CB8-00749620C17B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BB1CBD3F-57EA-4909-9495-C80D74BDF7CC}

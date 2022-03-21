@@ -1,4 +1,5 @@
 ﻿using DevNcore.UI.Foundation.Mvvm;
+using System;
 using System.Collections.Generic;
 using System.Windows.Input;
 using TicTacToe.Local.Data;
@@ -69,8 +70,11 @@ namespace TicTacToe.Local.Mvvm
 
 		private void SetPlayers()
 		{
-			Player1 = new("James");
-			Player2 = new("Elena");
+			string[] players1 = { "James", "Elena", "Lucas", "Kevin" };
+			string[] players2 = { "Harry", "Adela", "Edith", "Erica" };
+
+			Player1 = new(players1[new Random().Next(0, 3)]);
+			Player2 = new(players2[new Random().Next(0, 3)]);
 		}
 
 		private void Finish(Player player)

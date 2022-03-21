@@ -1,5 +1,0 @@
-<ResourceDictionary
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <Geometry x:Key="Triangle">M12,2L1,21H23M12,6L19.53,19H4.47</Geometry>
-</ResourceDictionary>
