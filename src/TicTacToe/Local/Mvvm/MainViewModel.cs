@@ -1,7 +1,7 @@
-﻿using DevNcore.UI.Foundation.Mvvm;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Windows.Input;
+using System.Collections.Generic;
+using DevNcore.UI.Foundation.Mvvm;
 using TicTacToe.Local.Data;
 
 namespace TicTacToe.Local.Mvvm
