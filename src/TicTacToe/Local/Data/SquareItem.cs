@@ -1,5 +1,5 @@
-﻿using DevNcore.UI.Foundation.Mvvm;
-using System.Windows.Input;
+﻿using System.Windows.Input;
+using DevNcore.UI.Foundation.Mvvm;
 
 namespace TicTacToe.Local.Data
 {
