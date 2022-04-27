@@ -31,13 +31,13 @@
 <br>
 
 ## 개발 환경
-주요 개발 환경은 아래와 같습니다. 
  
-✔️ **WPF .NET Core** &nbsp; [.NET 6.0 Preview](https://dotnet.microsoft.com/download/dotnet/6.0)
+✔️ **WPF .NET Core** &nbsp; [.NET 6.0]
 
-✔️ **Visual Studio 2022 Preview**  
+✔️ **Visual Studio 2022**  
 <br/>
-[![image](https://user-images.githubusercontent.com/52397976/127085632-9af789b0-58bd-4e63-be6c-30f567cf088b.png)](https://devblogs.microsoft.com/visualstudio/visual-studio-2022-preview-1-now-available/)
+
+![11](https://user-images.githubusercontent.com/76234292/165532633-b5c90fad-6b62-4677-a638-48cff70ef398.png)
 
 <br />
 
